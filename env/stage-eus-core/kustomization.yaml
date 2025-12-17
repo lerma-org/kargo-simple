@@ -5,4 +5,4 @@ resources:
 namespace: guestbook-simple-stage-eus-core
 images:
 - name: ghcr.io/lerma-org/guestbook
-  newTag: v0.0.2
+  newTag: v0.0.3
