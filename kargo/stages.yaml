@@ -16,6 +16,38 @@ spec:
   health:
     analyses: []
   promotionTemplate:
+    vars:
+    - name: repoURL
+      value: https://github.com/lerma-org/kargo-simple.git
+    - name: branch
+      value: main
+    spec:
+      steps:
+      - task:
+          name: promote
+
+---
+# === TIER 1.5: STAGE GATEWAY (Fan-out point) ===
+apiVersion: kargo.akuity.io/v1alpha1
+kind: Stage
+metadata:
+  name: stage-gateway
+  namespace: kargo-simple
+  annotations:
+    kargo.akuity.io/color: orange
+spec:
+  requestedFreight:
+  - origin:
+      kind: Warehouse
+      name: guestbook
+    sources:
+      stages:
+      - dev-eus-core
+  health:
+    analyses: []
+  promotion:
+    autoPromotionEnabled: true
+  promotionTemplate:
     spec:
       steps:
       - task:
@@ -37,11 +69,11 @@ spec:
       name: guestbook
     sources:
       stages:
-      - dev-eus-core
+      - stage-gateway
   health:
     analyses: []
   promotion:
-    autoPromotionEnabled: false
+    autoPromotionEnabled: true
   promotionTemplate:
     spec:
       steps:
@@ -63,11 +95,11 @@ spec:
       name: guestbook
     sources:
       stages:
-      - dev-eus-core
+      - stage-gateway
   health:
     analyses: []
   promotion:
-    autoPromotionEnabled: false
+    autoPromotionEnabled: true
   promotionTemplate:
     spec:
       steps:
@@ -89,11 +121,11 @@ spec:
       name: guestbook
     sources:
       stages:
-      - dev-eus-core
+      - stage-gateway
   health:
     analyses: []
   promotion:
-    autoPromotionEnabled: false
+    autoPromotionEnabled: true
   promotionTemplate:
     spec:
       steps:
@@ -115,11 +147,11 @@ spec:
       name: guestbook
     sources:
       stages:
-      - dev-eus-core
+      - stage-gateway
   health:
     analyses: []
   promotion:
-    autoPromotionEnabled: false
+    autoPromotionEnabled: true
   promotionTemplate:
     spec:
       steps:
@@ -141,11 +173,11 @@ spec:
       name: guestbook
     sources:
       stages:
-      - dev-eus-core
+      - stage-gateway
   health:
     analyses: []
   promotion:
-    autoPromotionEnabled: false
+    autoPromotionEnabled: true
   promotionTemplate:
     spec:
       steps:
@@ -167,11 +199,11 @@ spec:
       name: guestbook
     sources:
       stages:
-      - dev-eus-core
+      - stage-gateway
   health:
     analyses: []
   promotion:
-    autoPromotionEnabled: false
+    autoPromotionEnabled: true
   promotionTemplate:
     spec:
       steps:
