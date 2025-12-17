@@ -4,76 +4,75 @@ metadata:
   name: kargo-simple
   namespace: kargo-simple
 spec:
-  autoPromotionEnabled: false
-  stages:
+  promotionPolicies:
     # Warehouse gateway - auto-promote immediately
-    warehouse-gateway:
+    - stage: warehouse-gateway
       autoPromotionEnabled: true
     
     # Dev stage - manual promotion only
-    dev-eus-core:
+    - stage: dev-eus-core
       autoPromotionEnabled: false
     
-    # Gateway - auto-promote to downstream stages  
-    stage-gateway:
+    # Stage gateway - auto-promote to downstream stages  
+    - stage: stage-gateway
       autoPromotionEnabled: true
     
     # All parallel stage-* - auto-promote together
-    stage-eus-core:
+    - stage: stage-eus-core
       autoPromotionEnabled: true
-    stage-eus-nrt:
+    - stage: stage-eus-nrt
       autoPromotionEnabled: true
-    stage-eus-usaf:
+    - stage: stage-eus-usaf
       autoPromotionEnabled: true
-    stage-local-aio1:
+    - stage: stage-local-aio1
       autoPromotionEnabled: true
-    stage-local-lab:
+    - stage: stage-local-lab
       autoPromotionEnabled: true
-    stage-local-qatar:
+    - stage: stage-local-qatar
       autoPromotionEnabled: true
     
     # Test stage - auto-promote
-    test-eus-core:
+    - stage: test-eus-core
       autoPromotionEnabled: true
     
     # UAT - auto-promote
-    uat-eus-core:
+    - stage: uat-eus-core
       autoPromotionEnabled: true
     
     # Production gate - manual approval required
-    promote-to-prod:
+    - stage: promote-to-prod
       autoPromotionEnabled: false
     
     # All prod-* - auto-promote once gate approves
-    prod-eus-core:
+    - stage: prod-eus-core
       autoPromotionEnabled: true
-    prod-eus-acad:
+    - stage: prod-eus-acad
       autoPromotionEnabled: true
-    prod-eus-acn:
+    - stage: prod-eus-acn
       autoPromotionEnabled: true
-    prod-eus-cpc:
+    - stage: prod-eus-cpc
       autoPromotionEnabled: true
-    prod-eus-cummins:
+    - stage: prod-eus-cummins
       autoPromotionEnabled: true
-    prod-eus-eydemo:
+    - stage: prod-eus-eydemo
       autoPromotionEnabled: true
-    prod-eus-lennar:
+    - stage: prod-eus-lennar
       autoPromotionEnabled: true
-    prod-eus-mon:
+    - stage: prod-eus-mon
       autoPromotionEnabled: true
-    prod-eus-msft:
+    - stage: prod-eus-msft
       autoPromotionEnabled: true
-    prod-eus-mtus:
+    - stage: prod-eus-mtus
       autoPromotionEnabled: true
-    prod-eus-nrt:
+    - stage: prod-eus-nrt
       autoPromotionEnabled: true
-    prod-eus-sdrl:
+    - stage: prod-eus-sdrl
       autoPromotionEnabled: true
-    prod-eus-slalom:
+    - stage: prod-eus-slalom
       autoPromotionEnabled: true
-    prod-eus-vrt:
+    - stage: prod-eus-vrt
       autoPromotionEnabled: true
-    prod-local-qatar:
+    - stage: prod-local-qatar
       autoPromotionEnabled: true
-    prod-scus-wer:
+    - stage: prod-scus-wer
       autoPromotionEnabled: true
