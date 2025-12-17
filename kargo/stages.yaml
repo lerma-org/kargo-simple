@@ -41,11 +41,6 @@ spec:
   health:
     analyses: []
   promotionTemplate:
-    vars:
-    - name: repoURL
-      value: https://github.com/lerma-org/kargo-simple.git
-    - name: branch
-      value: main
     spec:
       steps:
       - task:
