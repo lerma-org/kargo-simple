@@ -13,6 +13,8 @@ spec:
       name: guestbook
     sources:
       direct: true
+  health:
+    analyses: []
   promotionTemplate:
     spec:
       steps:
@@ -36,6 +38,10 @@ spec:
     sources:
       stages:
       - dev-eus-core
+  health:
+    analyses: []
+  promotion:
+    autoPromotionEnabled: false
   promotionTemplate:
     spec:
       steps:
@@ -58,6 +64,10 @@ spec:
     sources:
       stages:
       - dev-eus-core
+  health:
+    analyses: []
+  promotion:
+    autoPromotionEnabled: false
   promotionTemplate:
     spec:
       steps:
@@ -80,6 +90,10 @@ spec:
     sources:
       stages:
       - dev-eus-core
+  health:
+    analyses: []
+  promotion:
+    autoPromotionEnabled: false
   promotionTemplate:
     spec:
       steps:
@@ -102,6 +116,10 @@ spec:
     sources:
       stages:
       - dev-eus-core
+  health:
+    analyses: []
+  promotion:
+    autoPromotionEnabled: false
   promotionTemplate:
     spec:
       steps:
@@ -124,6 +142,10 @@ spec:
     sources:
       stages:
       - dev-eus-core
+  health:
+    analyses: []
+  promotion:
+    autoPromotionEnabled: false
   promotionTemplate:
     spec:
       steps:
@@ -146,6 +168,10 @@ spec:
     sources:
       stages:
       - dev-eus-core
+  health:
+    analyses: []
+  promotion:
+    autoPromotionEnabled: false
   promotionTemplate:
     spec:
       steps:
@@ -174,6 +200,10 @@ spec:
       - stage-local-aio1
       - stage-local-lab
       - stage-local-qatar
+  health:
+    analyses: []
+  promotion:
+    autoPromotionEnabled: false
   promotionTemplate:
     spec:
       steps:
@@ -197,6 +227,10 @@ spec:
     sources:
       stages:
       - test-eus-core
+  health:
+    analyses: []
+  promotion:
+    autoPromotionEnabled: false
   promotionTemplate:
     spec:
       steps:
@@ -220,6 +254,10 @@ spec:
     sources:
       stages:
       - uat-eus-core
+  health:
+    analyses: []
+  promotion:
+    autoPromotionEnabled: false
   promotionTemplate:
     spec:
       steps:
@@ -245,6 +283,10 @@ spec:
     sources:
       stages:
       - uat-eus-core
+  health:
+    analyses: []
+  promotion:
+    autoPromotionEnabled: false
   promotionTemplate:
     spec:
       steps:
@@ -270,6 +312,10 @@ spec:
     sources:
       stages:
       - uat-eus-core
+  health:
+    analyses: []
+  promotion:
+    autoPromotionEnabled: false
   promotionTemplate:
     spec:
       steps:
@@ -295,6 +341,10 @@ spec:
     sources:
       stages:
       - uat-eus-core
+  health:
+    analyses: []
+  promotion:
+    autoPromotionEnabled: false
   promotionTemplate:
     spec:
       steps:
@@ -320,6 +370,10 @@ spec:
     sources:
       stages:
       - uat-eus-core
+  health:
+    analyses: []
+  promotion:
+    autoPromotionEnabled: false
   promotionTemplate:
     spec:
       steps:
@@ -345,6 +399,10 @@ spec:
     sources:
       stages:
       - uat-eus-core
+  health:
+    analyses: []
+  promotion:
+    autoPromotionEnabled: false
   promotionTemplate:
     spec:
       steps:
@@ -370,6 +428,10 @@ spec:
     sources:
       stages:
       - uat-eus-core
+  health:
+    analyses: []
+  promotion:
+    autoPromotionEnabled: false
   promotionTemplate:
     spec:
       steps:
@@ -395,6 +457,10 @@ spec:
     sources:
       stages:
       - uat-eus-core
+  health:
+    analyses: []
+  promotion:
+    autoPromotionEnabled: false
   promotionTemplate:
     spec:
       steps:
@@ -420,6 +486,10 @@ spec:
     sources:
       stages:
       - uat-eus-core
+  health:
+    analyses: []
+  promotion:
+    autoPromotionEnabled: false
   promotionTemplate:
     spec:
       steps:
@@ -445,6 +515,10 @@ spec:
     sources:
       stages:
       - uat-eus-core
+  health:
+    analyses: []
+  promotion:
+    autoPromotionEnabled: false
   promotionTemplate:
     spec:
       steps:
@@ -470,6 +544,10 @@ spec:
     sources:
       stages:
       - uat-eus-core
+  health:
+    analyses: []
+  promotion:
+    autoPromotionEnabled: false
   promotionTemplate:
     spec:
       steps:
@@ -495,6 +573,10 @@ spec:
     sources:
       stages:
       - uat-eus-core
+  health:
+    analyses: []
+  promotion:
+    autoPromotionEnabled: false
   promotionTemplate:
     spec:
       steps:
@@ -520,6 +602,10 @@ spec:
     sources:
       stages:
       - uat-eus-core
+  health:
+    analyses: []
+  promotion:
+    autoPromotionEnabled: false
   promotionTemplate:
     spec:
       steps:
@@ -545,6 +631,10 @@ spec:
     sources:
       stages:
       - uat-eus-core
+  health:
+    analyses: []
+  promotion:
+    autoPromotionEnabled: false
   promotionTemplate:
     spec:
       steps:
@@ -570,6 +660,10 @@ spec:
     sources:
       stages:
       - uat-eus-core
+  health:
+    analyses: []
+  promotion:
+    autoPromotionEnabled: false
   promotionTemplate:
     spec:
       steps:
@@ -595,6 +689,10 @@ spec:
     sources:
       stages:
       - uat-eus-core
+  health:
+    analyses: []
+  promotion:
+    autoPromotionEnabled: false
   promotionTemplate:
     spec:
       steps:
