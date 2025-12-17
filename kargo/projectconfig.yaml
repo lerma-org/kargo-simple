@@ -1,0 +1,75 @@
+apiVersion: kargo.akuity.io/v1alpha1
+kind: ProjectConfig
+metadata:
+  name: kargo-simple
+  namespace: kargo-simple
+spec:
+  autoPromotionEnabled: false
+  stages:
+    # Dev stage - manual promotion only
+    dev-eus-core:
+      autoPromotionEnabled: false
+    
+    # Gateway - auto-promote to downstream stages  
+    stage-gateway:
+      autoPromotionEnabled: true
+    
+    # All parallel stage-* - auto-promote together
+    stage-eus-core:
+      autoPromotionEnabled: true
+    stage-eus-nrt:
+      autoPromotionEnabled: true
+    stage-eus-usaf:
+      autoPromotionEnabled: true
+    stage-local-aio1:
+      autoPromotionEnabled: true
+    stage-local-lab:
+      autoPromotionEnabled: true
+    stage-local-qatar:
+      autoPromotionEnabled: true
+    
+    # Test stage - auto-promote
+    test-eus-core:
+      autoPromotionEnabled: true
+    
+    # UAT - auto-promote
+    uat-eus-core:
+      autoPromotionEnabled: true
+    
+    # Production gate - manual approval required
+    promote-to-prod:
+      autoPromotionEnabled: false
+    
+    # All prod-* - auto-promote once gate approves
+    prod-eus-core:
+      autoPromotionEnabled: true
+    prod-eus-acad:
+      autoPromotionEnabled: true
+    prod-eus-acn:
+      autoPromotionEnabled: true
+    prod-eus-cpc:
+      autoPromotionEnabled: true
+    prod-eus-cummins:
+      autoPromotionEnabled: true
+    prod-eus-eydemo:
+      autoPromotionEnabled: true
+    prod-eus-lennar:
+      autoPromotionEnabled: true
+    prod-eus-mon:
+      autoPromotionEnabled: true
+    prod-eus-msft:
+      autoPromotionEnabled: true
+    prod-eus-mtus:
+      autoPromotionEnabled: true
+    prod-eus-nrt:
+      autoPromotionEnabled: true
+    prod-eus-sdrl:
+      autoPromotionEnabled: true
+    prod-eus-slalom:
+      autoPromotionEnabled: true
+    prod-eus-vrt:
+      autoPromotionEnabled: true
+    prod-local-qatar:
+      autoPromotionEnabled: true
+    prod-scus-wer:
+      autoPromotionEnabled: true
