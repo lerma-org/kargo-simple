@@ -40,6 +40,9 @@ spec:
       - warehouse-gateway
   health:
     analyses: []
+  subscriptions:
+    upstreamStages:
+    - name: warehouse-gateway
   promotionTemplate:
     spec:
       steps:
@@ -65,6 +68,9 @@ spec:
       - dev-eus-core
   health:
     analyses: []
+  subscriptions:
+    upstreamStages:
+    - name: dev-eus-core
   promotionTemplate:
     spec:
       steps:
