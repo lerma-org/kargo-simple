@@ -6,6 +6,10 @@ metadata:
 spec:
   autoPromotionEnabled: false
   stages:
+    # Warehouse gateway - auto-promote immediately
+    warehouse-gateway:
+      autoPromotionEnabled: true
+    
     # Dev stage - manual promotion only
     dev-eus-core:
       autoPromotionEnabled: false

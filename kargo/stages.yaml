@@ -1,3 +1,27 @@
+# === TIER 0: WAREHOUSE GATEWAY ===
+apiVersion: kargo.akuity.io/v1alpha1
+kind: Stage
+metadata:
+  name: warehouse-gateway
+  namespace: kargo-simple
+  annotations:
+    kargo.akuity.io/color: yellow
+spec:
+  requestedFreight:
+  - origin:
+      kind: Warehouse
+      name: guestbook
+    sources:
+      direct: true
+  health:
+    analyses: []
+  promotionTemplate:
+    spec:
+      steps:
+      - task:
+          name: promote
+
+---
 # === TIER 1: DEV ===
 apiVersion: kargo.akuity.io/v1alpha1
 kind: Stage
@@ -12,7 +36,8 @@ spec:
       kind: Warehouse
       name: guestbook
     sources:
-      direct: true
+      stages:
+      - warehouse-gateway
   health:
     analyses: []
   promotionTemplate:
@@ -45,8 +70,6 @@ spec:
       - dev-eus-core
   health:
     analyses: []
-  promotion:
-    autoPromotionEnabled: true
   promotionTemplate:
     spec:
       steps:
